@@ -3,9 +3,11 @@ import { ref } from "vue";
 import type { Ref } from "vue";
 
 const newTodoItem: Ref<string> = ref("");
+const emit = defineEmits(["submit-item"]);
 
-const addTodo = () => {
-  localStorage.setItem(newTodoItem.value, newTodoItem.value);
+const submitTodo = () => {
+  // localStorage.setItem(newTodoItem.value, newTodoItem.value);
+  emit("submit-item", newTodoItem.value);
   newTodoItem.value = "";
 };
 </script>
@@ -14,7 +16,7 @@ const addTodo = () => {
   <div class="add-container">
     <div class="input-container">
       <input v-model="newTodoItem" />
-      <button @click="addTodo">add</button>
+      <button @click="submitTodo">add</button>
     </div>
   </div>
 </template>

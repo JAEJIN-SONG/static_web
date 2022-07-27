@@ -2,20 +2,12 @@
 import { ref, onMounted } from "vue";
 import type { Ref } from "vue";
 
-const todoItems: Ref<string[]> = ref([]);
+const props = defineProps({
+  todoItems: string[];
 
-todoItems.value.push("add todo");
-
-onMounted(() => {
-  if (localStorage.length > 0) {
-    for (let i = 0; i < localStorage.length; i++) {
-      if (localStorage.key(i) !== "loglevel:webpack-dev-server") {
-        const key: string = localStorage.key(i) as string;
-        todoItems.value.push(key);
-      }
-    }
-  }
 });
+
+// todoItems.value.push("add todo");
 </script>
 
 <template>
