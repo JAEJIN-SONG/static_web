@@ -29,9 +29,9 @@
 
 <style>
 nav {
+  position: fixed;
   width: 100%;
   height: 60px;
-  /* background-color: antiquewhite; */
   border-bottom: 1px solid transparent;
 }
 

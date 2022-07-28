@@ -6,7 +6,6 @@ const newTodoItem: Ref<string> = ref("");
 const emit = defineEmits(["submit-item"]);
 
 const submitTodo = () => {
-  // localStorage.setItem(newTodoItem.value, newTodoItem.value);
   emit("submit-item", newTodoItem.value);
   newTodoItem.value = "";
 };

@@ -3,7 +3,8 @@
 <template>
   <section class="introduce-section">
     <div class="bg-container">
-      <img src="src/assets/background-1.jpg" alt="background-1" />
+      <!-- <img src="src/assets/background-1.jpg" alt="background-1" /> -->
+      <video muted autoplay src="src/assets/video-main.mp4"></video>
     </div>
     <div class="content-container">
       <div class="text-area">
@@ -22,12 +23,12 @@
   position: relative;
 }
 
-.bg-container img {
+.bg-container video {
   position: absolute;
   width: 100%;
   height: 100%;
   z-index: -1;
-  opacity: 0.5;
+  opacity: 0.8;
   left: 0;
   right: 0;
 }
