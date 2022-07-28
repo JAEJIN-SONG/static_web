@@ -28,9 +28,10 @@
   width: 100%;
   height: 100%;
   z-index: -1;
-  opacity: 0.8;
+  /* opacity: 0.8; */
   left: 0;
   right: 0;
+  object-fit: cover;
 }
 
 .content-container {

@@ -20,6 +20,15 @@
             <li class="navbar-item">
               <a href="#">채용</a>
             </li>
+            <div class="language-container">
+              <li class="lang-item">
+                <a href="#">KOR</a>
+              </li>
+              <span>|</span>
+              <li class="lang-item">
+                <a href="#">ENG</a>
+              </li>
+            </div>
           </ul>
         </div>
       </div>
@@ -73,9 +82,35 @@ nav {
   padding: 0 8px;
 }
 
+.navbar-menu .language-container {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-menu .language-container .lang-item {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding: 0 8px;
+  color: #a5a5a5;
+}
+
+.navbar-menu .language-container .lang-item a {
+  text-decoration: none;
+  color: white;
+  padding: 12px 10px;
+}
+
+.navbar-menu .language-container span {
+  color: #a5a5a5;
+}
+
 .navbar-item a {
   text-decoration: none;
   background-color: transparent;
-  color: currentColor;
+  color: white;
+  padding: 12px 10px;
+  font-size: 16px;
 }
 </style>
