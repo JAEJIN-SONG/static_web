@@ -17,13 +17,8 @@ module.exports = {
         ignores: [],
       },
     ],
+    "no-unused-vars": "off",
+    // "@typescript-eslint/no-unused-vars": ["error"],
+    // "vue/script-setup-uses-vars": "error",
   },
-  // plugins: ["prettier"],
-  // "prettier/prettier": [
-  //   "error",
-  //   {
-  //     singleQuote: true,
-  //     parser: "flow",
-  //   },
-  // ],
 };

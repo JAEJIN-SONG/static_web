@@ -1,12 +1,22 @@
+<script lang="ts" setup>
+import { useRouter, useRoute } from "vue-router";
+
+const router = useRouter();
+const route = useRoute();
+</script>
+
 <template>
   <nav>
     <div class="navbar">
       <div class="navbar-inner">
-        <div class="navbar-logo">DDOCKDDOCK</div>
+        <div class="navbar-logo">
+          <a href="/">DDOCKDDOCK</a>
+        </div>
         <div class="navbar-content">
           <ul class="navbar-menu">
             <li class="navbar-item">
-              <a href="#">회사소개</a>
+              <!-- <a href="#">회사소개</a> -->
+              <router-link to="/">회사소개</router-link>
             </li>
             <li class="navbar-item">
               <a href="#">고객센터</a>
@@ -42,6 +52,7 @@ nav {
   width: 100%;
   height: 60px;
   border-bottom: 1px solid transparent;
+  z-index: 2;
 }
 
 .navbar {
@@ -63,6 +74,11 @@ nav {
   align-items: center;
   font-weight: bold;
   font-size: 24px;
+}
+
+.navbar-logo a {
+  text-decoration: none;
+  color: white;
 }
 
 .navbar-content {
@@ -112,5 +128,9 @@ nav {
   color: white;
   padding: 12px 10px;
   font-size: 16px;
+}
+
+.navbar-item router-link {
+  color: white;
 }
 </style>
