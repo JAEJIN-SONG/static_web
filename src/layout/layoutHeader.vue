@@ -1,9 +1,4 @@
-<script lang="ts" setup>
-import { useRouter, useRoute } from "vue-router";
-
-const router = useRouter();
-const route = useRoute();
-</script>
+<script lang="ts" setup></script>
 
 <template>
   <nav>
@@ -15,8 +10,7 @@ const route = useRoute();
         <div class="navbar-content">
           <ul class="navbar-menu">
             <li class="navbar-item">
-              <!-- <a href="#">회사소개</a> -->
-              <router-link to="/">회사소개</router-link>
+              <a href="#">회사소개</a>
             </li>
             <li class="navbar-item">
               <a href="#">고객센터</a>
