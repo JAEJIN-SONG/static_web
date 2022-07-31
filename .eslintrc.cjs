@@ -11,14 +11,6 @@ module.exports = {
     "plugin:prettier/recommended",
   ],
   rules: {
-    "vue/multi-word-component-names": [
-      "error",
-      {
-        ignores: [],
-      },
-    ],
-    "no-unused-vars": "off",
-    // "@typescript-eslint/no-unused-vars": ["error"],
-    // "vue/script-setup-uses-vars": "error",
+    "vue/multi-word-component-names": "off",
   },
 };
