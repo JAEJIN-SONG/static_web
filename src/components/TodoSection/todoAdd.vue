@@ -14,16 +14,44 @@ const submitTodo = () => {
 <template>
   <div class="add-container">
     <div class="input-container">
-      <input v-model="newTodoItem" />
-      <button @click="submitTodo">add</button>
+      <div class="input-box">
+        <input v-model="newTodoItem" />
+        <button @click="submitTodo">add</button>
+      </div>
     </div>
   </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 .add-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  .input-container {
+    display: flex;
+    align-items: center;
+    .input-box {
+      input {
+        border: none;
+        font-size: 1rem;
+        height: 50px;
+        padding: 0;
+
+        &:focus {
+          outline: none;
+        }
+      }
+      button {
+        border: none;
+        background-color: wheat;
+        height: 50px;
+        padding: 0;
+
+        &:focus-visible {
+          outline: 0;
+        }
+      }
+    }
+  }
 }
 </style>
