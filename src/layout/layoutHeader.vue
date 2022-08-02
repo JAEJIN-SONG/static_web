@@ -14,7 +14,7 @@
               <router-link to="/introduce">회사소개</router-link>
             </li>
             <li class="navbar-item">
-              <a href="#">고객센터</a>
+              <router-link to="#">고객센터</router-link>
             </li>
             <li class="navbar-item">
               <a href="#">자주 묻는 질문</a>
@@ -122,10 +122,12 @@ nav {
   background-color: transparent;
   color: white;
   padding: 12px 10px;
-  font-size: 16px;
+  font-size: 32px;
+
+  transition-duration: 1s;
 }
 
-.navbar-item router-link {
-  color: white;
+.navbar-item a:hover {
+  color: #c9c9c9;
 }
 </style>

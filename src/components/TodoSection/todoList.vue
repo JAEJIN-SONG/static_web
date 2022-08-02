@@ -1,12 +1,23 @@
 <script lang="ts" setup>
+import { ref, computed } from "vue";
+import type { todoitem } from "./todoSection.vue";
+
 const props = defineProps({
-  todoItems: Array<string>,
+  todoItems: Array<todoitem>,
 });
 
 const emit = defineEmits(["removeTodo"]);
 
-const removeTodo = (todoItem: string) => {
+const removeTodo = (todoItem: todoitem) => {
   emit("removeTodo", todoItem);
+};
+
+const complete = function (todoItem: todoitem) {
+  todoItem.isComplete = !todoItem.isComplete;
+};
+
+const completedLine = function (isChecked: boolean) {
+  return isChecked ? "line-through" : "none";
 };
 </script>
 
@@ -14,10 +25,20 @@ const removeTodo = (todoItem: string) => {
   <div class="todolist-container">
     <ul>
       <li v-for="(todoItem, index) in todoItems" :key="`${index}`">
-        {{ todoItem }}
-        <span class="remove-btn" @click="removeTodo(todoItem)">
+        <input
+          type="checkbox"
+          class="checkbox"
+          v-bind:checked="todoItem.isComplete"
+          @change="complete(todoItem)"
+        />
+        <span
+          class="content"
+          :style="{ textDecoration: completedLine(todoItem.isComplete) }"
+          >{{ todoItem.text }}</span
+        >
+        <div class="remove-btn" @click="removeTodo(todoItem)">
           <i class="fa-solid fa-trash-can"></i>
-        </span>
+        </div>
       </li>
     </ul>
   </div>
@@ -34,24 +55,40 @@ $secondColor: #3182f6;
     list-style: none;
     display: flex;
     flex-direction: column;
-    // background-color: aquamarine;
     padding: 0;
     li {
       display: flex;
       align-items: center;
-      // background-color: #191f28;
       color: $fontColor;
       width: 400px;
       height: 40px;
       margin-top: 30px;
-      font-weight: 700;
-      font-size: 30px;
       background-color: white;
-      border-radius: 5px;
-      padding: 6px 18px;
+      border-radius: 12px;
+      padding: 6px 20px;
+      box-shadow: 0 5px 18px -16px rgb(0 0 0);
+
+      .checkbox {
+        margin-right: 10px;
+      }
+      .content {
+        font-weight: 700;
+        font-size: 30px;
+      }
       .remove-btn {
+        display: flex;
         margin-left: auto;
         color: $secondColor;
+        cursor: pointer;
+
+        transition-duration: 1s;
+
+        &:hover {
+          transform: scale(1.2);
+        }
+        i {
+          font-size: 21px;
+        }
       }
     }
   }
