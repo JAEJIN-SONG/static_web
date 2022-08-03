@@ -3,8 +3,8 @@
 <template>
   <section class="introduce-section">
     <div class="bg-container">
-      <!-- <img src="src/assets/background-1.jpg" alt="background-1" /> -->
-      <video muted autoplay src="src/assets/video-main.mp4"></video>
+      <!-- <img src="@/assets/background-1.jpg" alt="background-1" /> -->
+      <video muted autoplay src="@/assets/video-main.mp4"></video>
     </div>
     <div class="content-container">
       <div class="text-area">
