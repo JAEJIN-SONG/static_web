@@ -35,7 +35,8 @@ const clearAll = function () {
         <h1>TODO LIST</h1>
       </div>
       <TodoAdd @submit-item="addTodo" />
-      <TodoList :todoItems="todolist" @remove-todo="removeTodoFromList" />
+      <!-- <TodoList :todoItems="todolist" @remove-todo="removeTodoFromList" /> -->
+      <TodoList :todo-items="todolist" @remove-todo="removeTodoFromList" />
       <div class="removeAll-container">
         <div class="removeAll">
           <span class="clearAllBtn" @click="clearAll">CLEAR ALL</span>

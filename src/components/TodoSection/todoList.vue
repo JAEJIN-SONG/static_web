@@ -1,8 +1,7 @@
 <script lang="ts" setup>
-import { ref, computed } from "vue";
 import type { todoitem } from "./todoSection.vue";
 
-const props = defineProps({
+defineProps({
   todoItems: Array<todoitem>,
 });
 
