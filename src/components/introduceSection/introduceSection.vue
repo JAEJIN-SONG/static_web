@@ -62,7 +62,6 @@ img {
   margin-bottom: 50px;
   word-break: keep-all;
   white-space: pre-wrap;
-  /* color: white; */
-  color: black;
+  color: white;
 }
 </style>
