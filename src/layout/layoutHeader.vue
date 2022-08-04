@@ -122,7 +122,7 @@ nav {
   background-color: transparent;
   color: white;
   padding: 12px 10px;
-  font-size: 32px;
+  font-size: 16px;
 
   transition-duration: 1s;
 }

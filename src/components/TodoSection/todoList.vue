@@ -72,7 +72,7 @@ $secondColor: #3182f6;
       }
       .content {
         font-weight: 700;
-        font-size: 30px;
+        font-size: 20px;
       }
       .remove-btn {
         display: flex;

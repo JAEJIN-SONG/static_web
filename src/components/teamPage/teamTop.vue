@@ -1,6 +1,13 @@
 <template>
   <div class="team-container">
-    <div class="temp">임시텍스트</div>
+    <div class="text-container">
+      <div class="transform-container">
+        <span
+          >임시 페이지 <br />
+          테스트용 제작입니다
+        </span>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -11,14 +18,25 @@
   height: 100vh;
   background-image: url("../../assets/team-1.jpeg");
   background-size: cover;
-  .temp {
-    display: flex;
-    margin: 0 auto;
-    top: 100px;
-    color: white;
-    font-weight: 700;
-    align-items: center;
-    font-size: 100px;
+  .text-container {
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    position: absolute;
+    margin-bottom: 247px;
+    .transform-container {
+      animation: riseUp 2s;
+      // transform: translateY(10px);
+      // opacity: 1;
+      span {
+        font-size: 72px;
+        font-weight: 900;
+        line-height: 93.6px;
+        color: white;
+        word-break: keep-all;
+      }
+    }
   }
 }
 </style>
