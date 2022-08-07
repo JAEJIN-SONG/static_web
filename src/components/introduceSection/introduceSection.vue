@@ -3,8 +3,7 @@
 <template>
   <section class="introduce-section">
     <div class="bg-container">
-      <!-- <img src="@/assets/background-1.jpg" alt="background-1" /> -->
-      <video muted autoplay src="@/assets/video-main.mp4"></video>
+      <img src="@/assets/background-2.jpeg" alt="background-1" />
     </div>
     <div class="content-container">
       <div class="text-area">
@@ -15,7 +14,7 @@
   </section>
 </template>
 
-<style>
+<style lang="scss" scoped>
 .bg-container {
   width: auto;
   height: 100vh;
@@ -51,6 +50,7 @@ img {
   align-items: center;
   display: flex;
   flex-direction: column;
+  animation: riseUp 2s;
 }
 
 .content-container .text-area h1 {
@@ -62,6 +62,6 @@ img {
   margin-bottom: 50px;
   word-break: keep-all;
   white-space: pre-wrap;
-  color: white;
+  color: #2a2a2a;
 }
 </style>

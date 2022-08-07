@@ -41,7 +41,7 @@
   </nav>
 </template>
 
-<style>
+<style scoped>
 nav {
   position: fixed;
   width: 100%;
@@ -128,6 +128,6 @@ nav {
 }
 
 .navbar-item a:hover {
-  color: #c9c9c9;
+  transform: scale(1.05);
 }
 </style>

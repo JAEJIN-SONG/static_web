@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import IntroudceSection from "../introduceSection/introduceSection.vue";
-import TodoSection from "../TodoSection/todoSection.vue";
+import TodoSection from "../todoSection/todoSection.vue";
 </script>
 
 <template>

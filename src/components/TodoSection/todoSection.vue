@@ -35,7 +35,6 @@ const clearAll = function () {
         <h1>TODO LIST</h1>
       </div>
       <TodoAdd @submit-item="addTodo" />
-      <!-- <TodoList :todoItems="todolist" @remove-todo="removeTodoFromList" /> -->
       <TodoList :todo-items="todolist" @remove-todo="removeTodoFromList" />
       <div class="removeAll-container">
         <div class="removeAll">
@@ -48,7 +47,7 @@ const clearAll = function () {
 
 <style scoped>
 .todo-section {
-  min-height: 500px;
+  min-height: 100vh;
   background: #f9fafb;
 }
 .todo-container {
@@ -57,6 +56,8 @@ const clearAll = function () {
   margin: auto;
   display: flex;
   flex-direction: column;
+  padding-top: 100px;
+  padding-bottom: 30px;
 }
 
 .todo-header {
@@ -89,9 +90,9 @@ const clearAll = function () {
 .removeAll-container .removeAll .clearAllBtn {
   background-color: white;
   border-radius: 12px;
-  padding: 6px 20px 2px 20px;
+  padding: 8px 20px;
   font-weight: 700;
-  font-size: 28px;
+  font-size: 20px;
   color: #191f28;
   box-shadow: 0 5px 18px -16px rgb(0 0 0);
 

@@ -1,3 +1,9 @@
+<script lang="ts" setup>
+function scrollDown() {
+  window.scrollTo({ top: window.innerHeight, behavior: "smooth" });
+}
+</script>
+
 <template>
   <div class="team-container">
     <div class="text-container">
@@ -8,16 +14,24 @@
         </span>
       </div>
     </div>
+    <div class="arrow-container">
+      <img
+        src="@/assets/team/down-arrow.png"
+        alt="down-arrow"
+        @click="scrollDown"
+      />
+    </div>
   </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .team-container {
   display: flex;
   justify-content: center;
   height: 100vh;
-  background-image: url("../../assets/team-1.jpeg");
+  background-image: url("../../assets/team/team-1.jpeg");
   background-size: cover;
+  background-position: center center;
   .text-container {
     right: 0;
     bottom: 0;
@@ -26,9 +40,7 @@
     position: absolute;
     margin-bottom: 247px;
     .transform-container {
-      animation: riseUp 2s;
-      // transform: translateY(10px);
-      // opacity: 1;
+      animation: riseUp 1s;
       span {
         font-size: 72px;
         font-weight: 900;
@@ -36,6 +48,15 @@
         color: white;
         word-break: keep-all;
       }
+    }
+  }
+  .arrow-container {
+    position: absolute;
+    bottom: 97px;
+    img {
+      width: 28px;
+      cursor: pointer;
+      animation: sway 2s infinite;
     }
   }
 }
