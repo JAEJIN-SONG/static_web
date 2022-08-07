@@ -33,6 +33,7 @@ const submitTodo = () => {
     align-items: center;
     border-radius: 35px;
     box-shadow: 0 5px 18px -16px rgb(0 0 0);
+    background-color: white;
     .input-box {
       input {
         border: none;
