@@ -29,7 +29,7 @@ function scrollDown() {
   display: flex;
   justify-content: center;
   height: 100vh;
-  background-image: url("../../assets/team/team-1.jpeg");
+  background-image: url("@/assets/team/team-1.jpeg");
   background-size: cover;
   background-position: center center;
   .text-container {
