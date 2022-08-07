@@ -3,7 +3,7 @@
 <template>
   <section class="introduce-section">
     <div class="bg-container">
-      <img src="@/assets/background-2.jpeg" alt="background-1" />
+      <img src="@/assets/background-2.jpeg" alt="background-2" />
     </div>
     <div class="content-container">
       <div class="text-area">
